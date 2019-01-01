@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Vue                  from 'vue';
+import Grid                 from './components/Grid.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    mounted: function () {
+
+        var instance = new Vue({
+          render: function (createElement) {
+            return createElement('div',
+                Array.apply(null, { length: 1 }).map(function () {
+                    return createElement(Grid, {
+                        props: {
+                            filterKey: '',
+                            columns: ['name', 'power'],
+                            data: [
+                              { name: 'Chuck Norris', power: Infinity },
+                              { name: 'Bruce Lee', power: 9000 },
+                              { name: 'Jackie Chan', power: 7000 },
+                              { name: 'Jet Li', power: 8000 }
+                            ] 
+                        } 
+                    })
+                }));
+          },
+          mounted: function () {
+              alert('test2');
+          }
+        });
+
+        instance.$mount('#app');
+
+    }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
