@@ -10,6 +10,8 @@
     "dist": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
   "dependencies": {
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
     "vue": "^2.5.21"
   },
   "devDependencies": {
