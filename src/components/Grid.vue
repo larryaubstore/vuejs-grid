@@ -1,5 +1,10 @@
 <template>
   <div>
+    <form id="search">
+      Search <input name="query" v-model="filterKey">
+    </form>
+
+
     <table>
         <thead>
           <tr>
@@ -20,6 +25,9 @@
           </tr>
         </tbody>
     </table>
+
+
+
   </div>
 </template>
 

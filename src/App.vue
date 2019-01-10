@@ -1,6 +1,9 @@
 <template>
-  <div id="app">
+   
+  <div>
+      <div id="app">
 
+      </div>
   </div>
 </template>
 
@@ -25,11 +28,23 @@ export default {
                 if (item.prix && item.prix.length > 0) {
                     item.prix = parseInt(item.prix); 
                 }
+
+                if (item.waCote && item.waCote.length > 0) {
+                    item.waCote = parseInt(item.waCote); 
+                } else {
+                    item.waCote = 0;
+                }
+
+                if (item.wsCote && item.wsCote.length > 0) {
+                    item.wsCote = parseInt(item.wsCote); 
+                } else {
+                    item.wsCote = 0;
+                }
+
                 cb(null, item);
             }, function (err, results) {
                 saqJsonMapped = results; 
             });
-            debugger;
 
             var instance = new Vue({
               render: function (createElement) {
@@ -38,15 +53,13 @@ export default {
                         return createElement(Grid, {
                             props: {
                                 filterKey: '',
-                                columns: ['text', 'code', 'lien', 'waCote', 'prix'],
-                                // data: saqJson.data
+                                columns: ['text', 'code', 'lien', 'waCote', 'prix', 'wsCote'],
                                 data: saqJsonMapped
                             } 
                         })
                     }));
               },
               mounted: function () {
-                  alert('test2');
               }
             });
             instance.$mount('#app');
