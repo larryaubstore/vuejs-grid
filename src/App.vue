@@ -46,6 +46,24 @@ export default {
                 saqJsonMapped = results; 
             });
 
+            await async.map(saqJsonMapped, function(item, cb) {
+                
+                var remap = {
+                    'description': item.text,
+                    'code': item.code,
+                    'lien': item.lien,
+                    'WA': item.waCote,
+                    'WS': item.wsCote,
+                    'prix': item.prix
+                };
+                cb(null, remap);
+            }, function (err, results) {
+                saqJsonMapped = results; 
+            });
+
+
+
+
             var instance = new Vue({
               render: function (createElement) {
                 return createElement('div',
@@ -53,7 +71,7 @@ export default {
                         return createElement(Grid, {
                             props: {
                                 filterKey: '',
-                                columns: ['text', 'code', 'lien', 'waCote', 'prix', 'wsCote'],
+                                columns: ['description', 'code', 'lien', 'WA', 'WS', 'prix'],
                                 data: saqJsonMapped
                             } 
                         })

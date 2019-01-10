@@ -20,7 +20,17 @@
         <tbody>
           <tr v-for="entry in filteredData">
             <td v-for="key in columns">
-              {{entry[key]}}
+
+                <div v-if="key === 'lien'" :inner-html.prop="entry[key] | linkFilter">
+                </div>
+
+                <div v-if="key === 'code'" :inner-html.prop="entry[key] | code">
+                </div>
+
+
+                <div v-if="key !== 'lien' && key !== 'code'"> 
+                  {{ entry[key] | removeZero }}
+                </div>
             </td>
           </tr>
         </tbody>
@@ -75,6 +85,23 @@ export default {
   filters: {
     capitalize: function (str) {
       return str.charAt(0).toUpperCase() + str.slice(1)
+    },
+    removeZero: function (value) {
+        if (value === 0) {
+            return "--";
+        } else {
+            return value;
+        }
+    },
+    linkFilter: function (value) {
+        return "<a href='" + value + "'>" + value + "</a>";
+    },
+    code: function (value) {
+        if (typeof (value) === 'string') {
+            return value.replace('Code SAQ :', '');
+        } else {
+            return value;
+        }
     }
   },
   methods: {
