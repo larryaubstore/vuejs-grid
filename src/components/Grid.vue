@@ -1,7 +1,7 @@
 <template>
   <div>
     <form id="search">
-      Search <input name="query" v-model="filterKey">
+      Chercher <input name="query" v-model="filterKey">
     </form>
 
 
