@@ -21,14 +21,15 @@
           <tr v-for="entry in filteredData">
             <td v-for="key in columns">
 
-                <div v-if="key === 'lien'" :inner-html.prop="entry[key] | linkFilter">
+                  
+                <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'])">
                 </div>
 
                 <div v-if="key === 'code'" :inner-html.prop="entry[key] | code">
                 </div>
 
 
-                <div v-if="key !== 'lien' && key !== 'code'"> 
+                <div v-if="key !== 'lien' && key !== 'code' && key !== 'description'"> 
                   {{ entry[key] | removeZero }}
                 </div>
             </td>
@@ -93,8 +94,8 @@ export default {
             return value;
         }
     },
-    linkFilter: function (value) {
-        return "<a href='" + value + "'>" + value + "</a>";
+    linkFilter: function (description, value) {
+        return "<a href='" + value + "'>" + description + "</a>";
     },
     code: function (value) {
         if (typeof (value) === 'string') {

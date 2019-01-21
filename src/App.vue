@@ -71,7 +71,7 @@ export default {
                         return createElement(Grid, {
                             props: {
                                 filterKey: '',
-                                columns: ['description', 'code', 'lien', 'WA', 'WS', 'prix'],
+                                columns: ['description', 'code', 'WA', 'WS', 'prix'],
                                 data: saqJsonMapped
                             } 
                         })
