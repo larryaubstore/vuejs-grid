@@ -1,44 +1,47 @@
 <template>
-  <div>
-    <form id="search">
-      Chercher <input name="query" v-model="filterKey">
-    </form>
+  <div class="gridSaq">
+    <div>
+        <form id="search">
+          Chercher <input name="query" v-model="filterKey">
+        </form>
 
 
-    <table>
-        <thead>
-          <tr>
-            <th v-for="key in columns"
-              @click="sortBy(key)"
-              :class="{ active: sortKey == key }">
-              {{ key | capitalize }}
-              <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
-              </span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="entry in filteredData">
-            <td v-for="key in columns">
+        <table>
+            <thead>
+              <tr>
+                <th v-for="key in columns"
+                  @click="sortBy(key)"
+                  :class="{ active: sortKey == key }">
+                  {{ key | capitalize }}
+                  <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="entry in filteredData">
+
+
 
                   
-                <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'])">
-                </div>
+                <td v-for="key in columns">
 
-                <div v-if="key === 'code'" :inner-html.prop="entry[key] | code">
-                </div>
+                      
+                    <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'])">
+                    </div>
 
-
-                <div v-if="key !== 'lien' && key !== 'code' && key !== 'description'"> 
-                  {{ entry[key] | removeZero }}
-                </div>
-            </td>
-          </tr>
-        </tbody>
-    </table>
+                    <div v-if="key === 'code'" :inner-html.prop="entry[key] | code">
+                    </div>
 
 
-
+                    <div v-if="key !== 'lien' && key !== 'code' && key !== 'description'"> 
+                      {{ entry[key] | removeZero }}
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
   </div>
 </template>
 
@@ -63,8 +66,9 @@ export default {
   computed: {
     filteredData: function () {
       var sortKey = this.sortKey
-      var filterKey = this.filterKey && this.filterKey.toLowerCase()
-      var order = this.sortOrders[sortKey] || 1
+      var filterKey = this.filterKey && this.filterKey.toLowerCase();
+      var order = this.sortOrders[sortKey] || 1;
+
       var data = this.data
       if (filterKey) {
         data = data.filter(function (row) {
@@ -120,6 +124,14 @@ export default {
       font-family: Helvetica Neue, Arial, sans-serif;
       font-size: 14px;
       color: #444;
+    }
+
+    .gridSaq {
+        text-align: center
+    }
+
+    .gridSaq > div {
+        display: inline-block;
     }
 
     table {
