@@ -27,10 +27,10 @@
                 <td v-for="key in columns">
 
                       
-                    <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'])">
+                    <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'])" :ref="entry['code'] | code">
                     </div>
 
-                    <div v-if="key === 'code'" :inner-html.prop="entry[key] | code">
+                    <div v-if="key === 'code'" :inner-html.prop="entry[key] | code" :ref.prop="entry[key] | code">
                     </div>
 
 
@@ -62,6 +62,10 @@ export default {
       sortKey: '',
       sortOrders: sortOrders
     }
+  },
+
+  mounted: function () {
+      debugger;
   },
   computed: {
     filteredData: function () {
@@ -103,7 +107,7 @@ export default {
     },
     code: function (value) {
         if (typeof (value) === 'string') {
-            return value.replace('Code SAQ :', '');
+            return value.replace('Code SAQ :', '').trim();
         } else {
             return value;
         }
