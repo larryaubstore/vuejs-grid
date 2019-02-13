@@ -106,7 +106,7 @@ export default {
         if (typeof (code) === 'string') {
             code = code.replace('Code SAQ :', '').trim();
         } 
-        var anchor = '#'  + code;
+        var anchor = '#/'  + code;
         return "<a href='" + anchor + "'>" + description + "</a>";
     },
     code: function (value) {
