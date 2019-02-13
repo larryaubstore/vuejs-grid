@@ -27,7 +27,7 @@
                 <td v-for="key in columns">
 
                       
-                    <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'])" :ref="entry['code'] | code">
+                    <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'], entry['code'])" :ref="entry['code'] | code" @click="pushState(entry['code'], entry['lien'])">
                     </div>
 
                     <div v-if="key === 'code'" :inner-html.prop="entry[key] | code" :ref.prop="entry[key] | code">
@@ -102,8 +102,12 @@ export default {
             return value;
         }
     },
-    linkFilter: function (description, value) {
-        return "<a href='" + value + "'>" + description + "</a>";
+    linkFilter: function (description, value, code) {
+        if (typeof (code) === 'string') {
+            code = code.replace('Code SAQ :', '').trim();
+        } 
+        var anchor = '#'  + code;
+        return "<a href='" + anchor + "'>" + description + "</a>";
     },
     code: function (value) {
         if (typeof (value) === 'string') {
@@ -117,6 +121,12 @@ export default {
     sortBy: function (key) {
       this.sortKey = key
       this.sortOrders[key] = this.sortOrders[key] * -1
+    },
+    pushState: function (code, href) {
+        if (typeof (code) === 'string') {
+            code = code.replace('Code SAQ :', '').trim();
+        } 
+        location.href = href;
     }
   }
 }
