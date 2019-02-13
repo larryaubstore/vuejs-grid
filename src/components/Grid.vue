@@ -27,7 +27,7 @@
                 <td v-for="key in columns">
 
                       
-                    <div v-if="key === 'description'" :inner-html.prop="entry[key] | linkFilter(entry['lien'], entry['code'])" :ref="entry['code'] | code" @click="pushState(entry['code'], entry['lien'])">
+                    <div v-if="key === 'description'"  :id="entry['code'] | code"  :inner-html.prop="entry[key] | linkFilter(entry['lien'], entry['code'])" :ref="entry['code'] | code" @click="pushState(entry['code'], entry['lien'])">
                     </div>
 
                     <div v-if="key === 'code'" :inner-html.prop="entry[key] | code" :ref.prop="entry[key] | code">
