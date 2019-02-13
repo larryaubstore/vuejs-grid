@@ -106,7 +106,7 @@ export default {
         if (typeof (code) === 'string') {
             code = code.replace('Code SAQ :', '').trim();
         } 
-        var anchor = '/#/'  + code;
+        var anchor = '#'  + code;
         return "<a href='" + anchor + "'>" + description + "</a>";
     },
     code: function (value) {
@@ -166,6 +166,7 @@ export default {
 
     td {
       background-color: #f9f9f9;
+      height: 300px;
     }
 
     th, td {
