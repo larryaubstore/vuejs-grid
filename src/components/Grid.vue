@@ -166,7 +166,6 @@ export default {
 
     td {
       background-color: #f9f9f9;
-      height: 300px;
     }
 
     th, td {
