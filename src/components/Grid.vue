@@ -125,7 +125,8 @@ export default {
     pushState: function (code, href) {
         if (typeof (code) === 'string') {
             code = code.replace('Code SAQ :', '').trim();
-        } 
+        }
+        localStorage.setItem('lastClick', code);
         location.href = href;
     }
   }
