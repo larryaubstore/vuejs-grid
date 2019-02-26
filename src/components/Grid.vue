@@ -123,6 +123,7 @@ export default {
       this.sortOrders[key] = this.sortOrders[key] * -1
     },
     pushState: function (code, href) {
+        this.$emit('linkClicked');
         if (typeof (code) === 'string') {
             code = code.replace('Code SAQ :', '').trim();
         }
