@@ -41,6 +41,10 @@ export default {
                     item.wsCote = 0;
                 }
 
+                if (item.creation) {
+                    item.creation = item.creation;
+                }
+
                 cb(null, item);
             }, function (err, results) {
                 saqJsonMapped = results; 
@@ -54,7 +58,8 @@ export default {
                     'lien': item.lien,
                     'WA': item.waCote,
                     'WS': item.wsCote,
-                    'prix': item.prix
+                    'prix': item.prix,
+                    'creation': item.creation
                 };
                 cb(null, remap);
             }, function (err, results) {

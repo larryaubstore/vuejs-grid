@@ -19,12 +19,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="entry in filteredData">
+                <tr v-for="entry in filteredData">
 
-
-
-                  
-                <td v-for="key in columns">
+                <td v-for="key in columns" :style="{ backgroundColor: activeColor(entry['creation'])}">
 
                       
                     <div v-if="key === 'description'"  :id="entry['code'] | code"  :inner-html.prop="entry[key] | linkFilter(entry['lien'], entry['code'])" :ref="entry['code'] | code" @click="pushState(entry['code'], entry['lien'])">
@@ -129,6 +126,15 @@ export default {
         }
         localStorage.setItem('lastClick', code);
         location.href = href;
+    },
+    activeColor: function (creation) {
+
+        creation = parseInt(creation);
+        if (creation < 3) {
+            return '#ce8787';
+        } else {
+            return '#f9f9f9';
+        }
     }
   }
 }
