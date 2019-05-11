@@ -1,0 +1,154 @@
+[
+    {
+        "code": "Code SAQ :\u00a012116246",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/chateau-bel-air-gloria-cru-bourgeois-2014/12116246",
+        "prix": "30,75\u00a0$",
+        "text": "Ch\u00e2teau Bel Air Gloria Cru Bourgeois 2014",
+        "waCote": "90",
+        "creation": 0
+    },
+    {
+        "code": "Code SAQ :\u00a010814585",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/domaine-terlato-et-chapoutier-lieu-dit-malakoff-shiraz-2012/10814585",
+        "prix": "31,00\u00a0$",
+        "text": "Domaine Terlato et Chapoutier Lieu Di... 2012",
+        "wsCote": "90",
+        "creation": 0
+    },
+    {
+        "code": "Code SAQ :\u00a010814585",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/domaine-terlato-et-chapoutier-lieu-dit-malakoff-shiraz-2012/10814585",
+        "prix": "31,00\u00a0$",
+        "text": "Domaine Terlato et Chapoutier Lieu Di... 2012",
+        "wsCote": "0 ",
+        "creation": 0
+    },
+    {
+        "code": "Code SAQ :\u00a010936427",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/domaine-grand-romane-cuvee-prestige-2016/10936427",
+        "prix": "31,00\u00a0$",
+        "text": "Domaine Grand Romane Cuv\u00e9e Prestige 2016",
+        "creation": 0,
+        "waCote": "93"
+    },
+    {
+        "code": "Code SAQ :\u00a013869215",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/chateau-chemin-royal-moulis-en-medoc-2015/13869215",
+        "prix": "31,00\u00a0$",
+        "text": "Ch\u00e2teau Chemin Royal Moulis en M\u00e9doc 2015",
+        "creation": 0,
+        "waCote": "89"
+    },
+    {
+        "code": "Code SAQ :\u00a013466555",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/jean-luc-colombo-saint-joseph-les-lauves-2016/13466555",
+        "prix": "31,00\u00a0$",
+        "text": "Jean-Luc Colombo Saint Joseph Les Lauves 2016",
+        "creation": 0,
+        "wsCote": "90"
+    },
+    {
+        "code": "Code SAQ :\u00a011860225",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-blanc/karthauserhof-schieferkristall-kabinett-riesling-2013/11860225",
+        "prix": "31,50\u00a0$",
+        "text": "Karthauserhof Schieferkristall Kabine... 2013",
+        "creation": 0,
+        "waCote": "89"
+    },
+    {
+        "code": "Code SAQ :\u00a012752154",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/chateau-cambon-la-pelouse-haut-medoc-cru-bourgeois-2014/12752154",
+        "prix": "31,50\u00a0$",
+        "text": "Ch\u00e2teau Cambon La Pelouse Haut-M\u00e9doc ... 2014",
+        "creation": 0,
+        "wsCote": "88"
+    },
+    {
+        "code": "Code SAQ :\u00a012668913",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-blanc/clos-des-lunes-cuvee-lune-dargent-2016/12668913",
+        "prix": "31,50\u00a0$",
+        "text": "Clos des Lunes cuv\u00e9e Lune d'Argent 2016",
+        "creation": 3,
+        "wsCote": "92"
+    },
+    {
+        "code": "Code SAQ :\u00a013566687",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/finca-valpiedra-reserva-2010/13566687",
+        "prix": "31,50\u00a0$",
+        "text": "Finca Valpiedra Reserva 2010",
+        "creation": 3,
+        "wsCote": "94"
+    },
+    {
+        "code": "Code SAQ :\u00a013867527",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/chateau-ducluzeau-listrac-medoc-2014/13867527",
+        "prix": "31,50\u00a0$",
+        "text": "Ch\u00e2teau Ducluzeau Listrac-M\u00e9doc 2014",
+        "creation": 3,
+        "wsCote": "88"
+    },
+    {
+        "code": "Code SAQ :\u00a013750370",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/le-clos-de-caveau-fruit-sauvage-2015/13750370",
+        "prix": "31,50\u00a0$",
+        "text": "Le Clos de Caveau Fruit Sauvage 2015",
+        "creation": 3,
+        "waCote": "92"
+    },
+    {
+        "code": "Code SAQ :\u00a012578256",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/pasos-de-san-martin-2013/12578256",
+        "prix": "31,75\u00a0$",
+        "text": "Pasos de San Martin 2013",
+        "creation": 3,
+        "wsCote": "91"
+    },
+    {
+        "code": "Code SAQ :\u00a013554344",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/decoy-merlot-2015/13554344",
+        "prix": "31,75\u00a0$",
+        "text": "Decoy Merlot 2015",
+        "creation": 3,
+        "wsCote": "88"
+    },
+    {
+        "code": "Code SAQ :\u00a013432611",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/tua-rita-perlato-del-bosco-2014/13432611",
+        "prix": "31,75\u00a0$",
+        "text": "Tua Rita Perlato del Bosco 2014",
+        "creation": 3,
+        "waCote": "90"
+    },
+    {
+        "code": "Code SAQ :\u00a012414825",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/le-mas-des-flauzieres-gigondas-grande-reserve-2015/12414825",
+        "prix": "32,00\u00a0$",
+        "text": "Le Mas des Flauzi\u00e8res Gigondas Grande... 2015",
+        "creation": 3,
+        "waCote": "93"
+    },
+    {
+        "code": "Code SAQ :\u00a013554580",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/decoy-zinfandel-2015/13554580",
+        "prix": "32,00\u00a0$",
+        "text": "Decoy Zinfandel 2015",
+        "creation": 3,
+        "wsCote": "90"
+    },
+    {
+        "code": "Code SAQ :\u00a012584120",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-blanc/leeuwin-estate-art-series-sauvignon-blanc-2013/12584120",
+        "prix": "32,50\u00a0$",
+        "text": "Leeuwin Estate Art Series Sauvignon B... 2013",
+        "creation": 3,
+        "waCote": "89"
+    },
+    {
+        "code": "Code SAQ :\u00a013213507",
+        "lien": "https://www.saq.com/page/fr/saqcom/vin-rouge/tandem-2014/13213507",
+        "prix": "32,50\u00a0$",
+        "text": "Tandem 2014",
+        "creation": 3,
+        "wsCote": "94"
+    }
+]

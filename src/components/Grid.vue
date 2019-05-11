@@ -2,6 +2,7 @@
   <div class="gridSaq">
     <div>
         <form id="search">
+          <button type="button" @click="setDefault">Par défaut</button>
           Chercher <input name="query" v-model="filterKey">
         </form>
 
@@ -53,7 +54,11 @@ export default {
   data: function () {
     var sortOrders = {}
     this.columns.forEach(function (key) {
-      sortOrders[key] = 1
+      if (localStorage.getItem(key) !== null) {
+        sortOrders[key] = parseInt(localStorage.getItem(key));
+      } else {
+        sortOrders[key] = 1;
+      }
     })
     return {
       sortKey: '',
@@ -62,11 +67,17 @@ export default {
   },
 
   mounted: function () {
-      debugger;
   },
   computed: {
     filteredData: function () {
-      var sortKey = this.sortKey
+
+
+
+      var sortKey = this.sortKey;
+
+      if (localStorage.getItem('sortKey') !== null) {
+        sortKey = localStorage.getItem('sortKey');
+      }
       var filterKey = this.filterKey && this.filterKey.toLowerCase();
       var order = this.sortOrders[sortKey] || 1;
 
@@ -116,8 +127,10 @@ export default {
   },
   methods: {
     sortBy: function (key) {
-      this.sortKey = key
-      this.sortOrders[key] = this.sortOrders[key] * -1
+      this.sortKey = key;
+      this.sortOrders[key] = this.sortOrders[key] * -1;
+      localStorage.setItem(key, this.sortOrders[key]);
+      localStorage.setItem('sortKey', key);
     },
     pushState: function (code, href) {
         this.$emit('linkClicked');
@@ -135,6 +148,15 @@ export default {
         } else {
             return '#f9f9f9';
         }
+    },
+    setDefault: function () {
+        this.columns.forEach((key) => {
+            this.sortOrders[key] = 1;
+            localStorage.removeItem(key);
+        });
+        this.sortKey = '';
+        localStorage.removeItem('sortKey');
+
     }
   }
 }
